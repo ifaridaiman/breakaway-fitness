@@ -22,6 +22,7 @@ const Navbar = () => {
       url: "/faq",
     },
   ];
+
   return (
     <MaxWidthWrapper className="py-4 flex justify-between items-center">
       <Image
@@ -30,7 +31,7 @@ const Navbar = () => {
         height={40}
         width={40}
       />
-      <div className="flex items-center gap-10">
+      <div className="lg:flex items-center gap-10 hidden">
         <ul className="flex items-center gap-6">
           {menuItems.map((menu) => {
             return (

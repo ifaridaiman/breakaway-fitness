@@ -5,38 +5,24 @@ export default function HeroImages() {
   return (
     <div className="w-full overflow-hidden">
       <div className="flex animate-scroll">
-        <ul className="flex shrink-0 gap-2">
+        <div className="flex shrink-0">
           {Array.from({ length: 6 }, (_, index) => (
-            <li key={index} className="w-[700px] shrink-0">
+            <div
+              key={`${index}`}
+              className="w-[80vw] md:w-96 lg:w-[700px] mr-2 flex-shrink-0"
+            >
               <AspectRatio ratio={16 / 9}>
                 <Image
                   src={`/images/breakway-gym-${index + 1}.webp`}
                   alt="gym"
                   fill
-                  className="rounded-lg object-cover pointer-events-none"
-                  draggable={false}
+                  className="object-cover rounded-lg"
+                  sizes="(max-width: 640px) 45vw, (max-width: 768px) 320px, (max-width: 1024px) 288px, (max-width: 1280px) 320px, 384px"
                 />
               </AspectRatio>
-            </li>
+            </div>
           ))}
-        </ul>
-
-        {/* Duplicate set for seamless loop */}
-        <ul className="flex shrink-0 gap-2">
-          {Array.from({ length: 6 }, (_, index) => (
-            <li key={index} className="w-[700px] shrink-0">
-              <AspectRatio ratio={16 / 9}>
-                <Image
-                  src={`/images/breakway-gym-${index + 1}.webp`}
-                  alt="gym"
-                  fill
-                  className="rounded-lg object-cover pointer-events-none"
-                  draggable={false}
-                />
-              </AspectRatio>
-            </li>
-          ))}
-        </ul>
+        </div>
       </div>
     </div>
   );
