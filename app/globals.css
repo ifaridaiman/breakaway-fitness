@@ -143,6 +143,6 @@
 }
 
 /* Pause animation on hover */
-/* .animate-scroll:hover {
+.animate-scroll:hover {
   animation-play-state: paused;
-} */
+}
