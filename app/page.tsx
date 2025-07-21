@@ -1,6 +1,6 @@
+import Footer from "@/components/Footer";
 import { HeroSection } from "@/components/home/HeroSection";
-import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-import Image from "next/image";
+import LocationSection from "@/components/home/LocationSection";
 
 export default function Home() {
   return (
@@ -10,6 +10,7 @@ export default function Home() {
         src="/assets/rectangle-line-3.svg"
       />
       <HeroSection />
+      <LocationSection />
       <section className="h-96 my-96"></section>
     </>
   );
