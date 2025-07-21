@@ -10,7 +10,7 @@ const HeroSection = () => {
         <h3 className="font-black text-6xl md:text-7xl lg:text-9xl xl:text-[8.8rem] xl:leading-32">
           BREAK FREE. <br />
           BREAK THROUGH. <br />
-          <span className="text-emerald-600">BREAKAWAY.</span>
+          <span className="bg-gradient-to-tr from-yellow-400 from-15% to-emerald-500 to-50% bg-clip-text text-transparent">BREAKAWAY.</span>
         </h3>
       </MaxWidthWrapper>
       <HeroImages />
