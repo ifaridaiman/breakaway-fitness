@@ -3,11 +3,6 @@ import MaxWidthWrapper from "../MaxWidthWrapper";
 import HeroImages from "./HeroImages";
 import localFont from "next/font/local";
 
-const impact = localFont({
-  src: "../../public/fonts/Impact-Font/impact.ttf",
-  display: "swap",
-});
-
 const madeOuterSans = localFont({
   src: "../../public/fonts/MADE-Outer-Sans-Black-PERSONAL-USE.otf",
   display: "swap",

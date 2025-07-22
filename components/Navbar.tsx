@@ -6,15 +6,15 @@ import Image from "next/image";
 const Navbar = () => {
   const menuItems = [
     {
-      title: "Home",
+      title: "HOME",
       url: "/",
     },
     {
-      title: "About",
+      title: "ABOUT",
       url: "/about",
     },
     {
-      title: "Schedule",
+      title: "SCHEDULE",
       url: "/schedule",
     },
     {
@@ -24,18 +24,26 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-40 p-2">
+    <nav className="sticky top-0 z-40 p-2 font-bold">
       <MaxWidthWrapper className=" bg-white/10 backdrop-blur-lg md:px-8 py-4 flex justify-between items-center rounded-2xl">
         <Link href="/">
           <Image
-            src="/mini-logo.webp"
+            src="/logo-icon-wordmark.svg"
             alt="Breakaway Fitness"
-            height={40}
-            width={40}
+            height={180}
+            width={180}
+            className="hidden xl:block"
+          />
+          <Image
+            src="/logo-icon.svg"
+            alt="Breakaway Fitness"
+            height={52}
+            width={52}
+            className="block xl:hidden"
           />
         </Link>
-        <div className="lg:flex items-center gap-10 hidden">
-          <ul className="flex items-center gap-6">
+        <div className="lg:flex items-center gap-10 hidden font-made-outer-sans-medium tracking-wider">
+          <ul className="flex items-center gap-4">
             {menuItems.map((menu) => {
               return (
                 <li key={menu.title}>
@@ -45,8 +53,8 @@ const Navbar = () => {
             })}
           </ul>
           <div className="flex items-center gap-2">
-            <Button variant="secondary">Contact</Button>
-            <Button>Sign Up</Button>
+            <Button variant="secondary">CONTACT</Button>
+            <Button>SIGN UP</Button>
           </div>
         </div>
       </MaxWidthWrapper>

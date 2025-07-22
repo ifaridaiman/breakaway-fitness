@@ -1,6 +1,16 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: madeOuterSansBlack;
+  src: url(../public/fonts/MADE-Outer-Sans-Black-PERSONAL-USE.otf);
+}
+
+@font-face {
+  font-family: madeOuterSansMedium;
+  src: url(../public/fonts/MADE-Outer-Sans-Medium-PERSONAL-USE.otf);
+}
+
 :root {
   --background: #eeede1;
   --foreground: #0a0a0a;
@@ -109,14 +119,11 @@
 
   --animate-infinite-scroll: infinite-scroll 32s linear infinite;
 
-  @keyframes infinite-scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
+  --font-made-outer-sans-medium: madeOuterSansMedium;
+  --font-made-outer-sans-black: madeOuterSansBlack;
+}
+
+@theme {
 }
 
 @layer base {
@@ -126,6 +133,13 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: madeOuterSansBlack;
   }
 }
 

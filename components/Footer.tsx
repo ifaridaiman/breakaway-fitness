@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="border md:border-2 border-gray-500 rounded-[3rem] p-2 md:p-8 lg:p-12">
             <div className="border md:border-2 border-gray-500 rounded-[3rem] p-2 md:p-8 lg:p-12">
               <div className="border md:border-2 border-gray-500 rounded-[3rem] py-28 px-4 flex flex-col items-center gap-4">
-                <h3 className="text-center font-bold text-3xl md:text-5xl">
+                <h3 className="text-center text-4xl md:text-5xl">
                   BREAKAWAY FROM LIMITS!
                 </h3>
                 <p className="text-center">
@@ -26,7 +26,7 @@ const Footer = () => {
                   for serious progress.
                 </p>
                 <Button className="mt-4 group" size="lg">
-                  Breakaway Now!
+                  BECOME A MEMBER
                   <ArrowRight className="group-hover:translate-x-1 transition duration-75" />
                 </Button>
               </div>
