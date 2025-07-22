@@ -7,7 +7,7 @@ const Navbar = () => {
   const menuItems = [
     {
       title: "Home",
-      url: "/home",
+      url: "/",
     },
     {
       title: "About",
@@ -26,12 +26,14 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-40 p-2">
       <MaxWidthWrapper className=" bg-white/10 backdrop-blur-lg md:px-8 py-4 flex justify-between items-center rounded-2xl">
-        <Image
-          src="/mini-logo.webp"
-          alt="Breakaway Fitness"
-          height={40}
-          width={40}
-        />
+        <Link href="/">
+          <Image
+            src="/mini-logo.webp"
+            alt="Breakaway Fitness"
+            height={40}
+            width={40}
+          />
+        </Link>
         <div className="lg:flex items-center gap-10 hidden">
           <ul className="flex items-center gap-6">
             {menuItems.map((menu) => {
