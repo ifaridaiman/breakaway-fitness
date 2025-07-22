@@ -1,16 +1,21 @@
-import { Facebook, Instagram } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import MaxWidthWrapper from "./MaxWidthWrapper";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons/faFacebook";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram";
+import { faTiktok } from "@fortawesome/free-brands-svg-icons/faTiktok";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons/faWhatsapp";
 
 const Footer = () => {
   return (
     <footer>
       <MaxWidthWrapper>
         <div className="border-0 md:border-2 border-gray-500 rounded-[3rem] p-0 md:p-8 lg:p-12">
-          <div className="border-2 border-gray-500 rounded-[3rem] p-2 md:p-8 lg:p-12">
-            <div className="border-2 border-gray-500 rounded-[3rem] p-2 md:p-8 lg:p-12">
-              <div className="border-2 border-gray-500 rounded-[3rem] py-28 px-4 flex flex-col items-center gap-4">
+          <div className="border md:border-2 border-gray-500 rounded-[3rem] p-2 md:p-8 lg:p-12">
+            <div className="border md:border-2 border-gray-500 rounded-[3rem] p-2 md:p-8 lg:p-12">
+              <div className="border md:border-2 border-gray-500 rounded-[3rem] py-28 px-4 flex flex-col items-center gap-4">
                 <h3 className="text-center font-bold text-3xl md:text-5xl">
                   BREAKAWAY FROM LIMITS!
                 </h3>
@@ -20,8 +25,9 @@ const Footer = () => {
                   Sign up now and unlock your potential with a membership built
                   for serious progress.
                 </p>
-                <Button className="mt-4" size="lg">
+                <Button className="mt-4 group" size="lg">
                   Breakaway Now!
+                  <ArrowRight className="group-hover:translate-x-1 transition duration-75" />
                 </Button>
               </div>
             </div>
@@ -44,11 +50,13 @@ const Footer = () => {
           </div>
           <div className="flex flex-col gap-10">
             <div className="flex flex-col items-center lg:items-end gap-2">
-              <p>contact@breakaway-fitness.com</p>
+              <p>info@breakaway-fitness.com</p>
               <p>012-877 5756</p>
-              <div className="flex gap-2">
-                <Instagram />
-                <Facebook />
+              <div className="flex gap-3">
+                <FontAwesomeIcon icon={faFacebook} size="lg" />
+                <FontAwesomeIcon icon={faInstagram} size="lg" />
+                <FontAwesomeIcon icon={faTiktok} size="lg" />
+                <FontAwesomeIcon icon={faWhatsapp} size="lg" />
               </div>
             </div>
             <p className="text-sm text-center lg:text-end">
