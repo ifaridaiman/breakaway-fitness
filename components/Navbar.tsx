@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-40 p-2 font-bold">
-      <MaxWidthWrapper className=" bg-white/10 backdrop-blur-lg md:px-8 py-4 flex justify-between items-center rounded-2xl">
+      <MaxWidthWrapper className="bg-white/10 backdrop-blur-lg px-6 md:px-8 py-4 flex justify-between items-center rounded-2xl">
         <Link href="/">
           <Image
             src="/logo-icon-wordmark.svg"
@@ -37,8 +37,8 @@ const Navbar = () => {
           <Image
             src="/logo-icon.svg"
             alt="Breakaway Fitness"
-            height={52}
-            width={52}
+            height={44}
+            width={44}
             className="block xl:hidden"
           />
         </Link>
