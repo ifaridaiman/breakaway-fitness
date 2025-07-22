@@ -7,8 +7,28 @@ import { faFacebook } from "@fortawesome/free-brands-svg-icons/faFacebook";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram";
 import { faTiktok } from "@fortawesome/free-brands-svg-icons/faTiktok";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons/faWhatsapp";
+import Link from "next/link";
 
 const Footer = () => {
+  const socials = [
+    {
+      icon: faFacebook,
+      link: "https://www.facebook.com/people/BreakawayFitness/61578301744703/?rdid=4ye0SvEwkiAITr6J&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1LK6kJYqFa%2F",
+    },
+    {
+      icon: faInstagram,
+      link: "https://www.instagram.com/breakawayfitness/",
+    },
+    {
+      icon: faWhatsapp,
+      link: "https://wa.me/60128775756",
+    },
+    {
+      icon: faTiktok,
+      link: "https://www.tiktok.com/@breakawayfitness",
+    },
+  ];
+
   return (
     <footer>
       <MaxWidthWrapper>
@@ -38,7 +58,7 @@ const Footer = () => {
         <MaxWidthWrapper className="flex flex-col items-center gap-6 lg:flex-row lg:justify-between">
           <div className="flex flex-col items-center lg:items-baseline gap-8">
             <Image
-              src="/mini-logo.webp"
+              src="/logo-icon.svg"
               alt="Breakaway Fitness"
               height={64}
               width={64}
@@ -53,10 +73,11 @@ const Footer = () => {
               <p>info@breakaway-fitness.com</p>
               <p>012-877 5756</p>
               <div className="flex gap-3">
-                <FontAwesomeIcon icon={faFacebook} size="lg" />
-                <FontAwesomeIcon icon={faInstagram} size="lg" />
-                <FontAwesomeIcon icon={faTiktok} size="lg" />
-                <FontAwesomeIcon icon={faWhatsapp} size="lg" />
+                {socials.map((social) => (
+                  <Link key={social.link} href={social.link} target="_blank">
+                    <FontAwesomeIcon icon={social.icon} size="lg" />
+                  </Link>
+                ))}
               </div>
             </div>
             <p className="text-sm text-center lg:text-end">
