@@ -4,7 +4,7 @@ import { AspectRatio } from '../ui/aspect-ratio'
 
 const BriefSection = () => {
   return (
-    <section className="py-64 my-10">
+    <section className="py-64">
       <MaxWidthWrapper className="grid grid-cols-1 lg:grid-cols-2 w-full gap-4">
         <div className="space-y-4 py-6 pr-8">
           <h3 className="text-3xl md:text-4xl lg:text-5xl">
