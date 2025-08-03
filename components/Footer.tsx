@@ -1,33 +1,33 @@
-import { ArrowRight } from "lucide-react";
-import Image from "next/image";
-import { Button } from "./ui/button";
-import MaxWidthWrapper from "./MaxWidthWrapper";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook } from "@fortawesome/free-brands-svg-icons/faFacebook";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram";
-import { faTiktok } from "@fortawesome/free-brands-svg-icons/faTiktok";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons/faWhatsapp";
-import Link from "next/link";
+import { ArrowRight } from 'lucide-react'
+import Image from 'next/image'
+import { Button } from './ui/button'
+import MaxWidthWrapper from './MaxWidthWrapper'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook } from '@fortawesome/free-brands-svg-icons/faFacebook'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram'
+import { faTiktok } from '@fortawesome/free-brands-svg-icons/faTiktok'
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons/faWhatsapp'
+import Link from 'next/link'
 
 const Footer = () => {
   const socials = [
     {
       icon: faFacebook,
-      link: "https://www.facebook.com/people/BreakawayFitness/61578301744703/?rdid=4ye0SvEwkiAITr6J&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1LK6kJYqFa%2F",
+      link: 'https://www.facebook.com/people/BreakawayFitness/61578301744703/?rdid=4ye0SvEwkiAITr6J&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1LK6kJYqFa%2F',
     },
     {
       icon: faInstagram,
-      link: "https://www.instagram.com/breakawayfitness/",
+      link: 'https://www.instagram.com/breakawayfitness/',
     },
     {
       icon: faWhatsapp,
-      link: "https://wa.me/60128775756",
+      link: 'https://wa.me/60128775756',
     },
     {
       icon: faTiktok,
-      link: "https://www.tiktok.com/@breakawayfitness",
+      link: 'https://www.tiktok.com/@breakawayfitness',
     },
-  ];
+  ]
 
   return (
     <footer>
@@ -40,10 +40,8 @@ const Footer = () => {
                   BREAKAWAY FROM LIMITS!
                 </h3>
                 <p className="text-center">
-                  Ready to take control of your health and transform your body?
-                  <br />
-                  Sign up now and unlock your potential with a membership built
-                  for serious progress.
+                  Join the Breakaway community today and start your journey
+                  <br /> towards a fitter, stronger you.
                 </p>
                 <Button className="mt-4 group" size="lg">
                   BECOME A MEMBER
@@ -87,7 +85,7 @@ const Footer = () => {
         </MaxWidthWrapper>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

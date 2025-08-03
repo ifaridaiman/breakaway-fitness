@@ -1,20 +1,23 @@
-import Image from "next/image";
-import MaxWidthWrapper from "../MaxWidthWrapper";
-import { AspectRatio } from "../ui/aspect-ratio";
+import Image from 'next/image'
+import MaxWidthWrapper from '../MaxWidthWrapper'
+import { AspectRatio } from '../ui/aspect-ratio'
 
 const BriefSection = () => {
   return (
     <section className="py-64 my-10">
       <MaxWidthWrapper className="grid grid-cols-1 lg:grid-cols-2 w-full gap-4">
         <div className="space-y-4 py-6 pr-8">
-          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+          <h3 className="text-3xl md:text-4xl lg:text-5xl">
             BREAKAWAY FITNESS, CYBERJAYA
           </h3>
-          <p className="text-lg leading-8">
-            Discover your potential at Breakaway Fitness Cyberjaya, the premier
-            fitness destination in Cyberjaya! As official HYROX Training Club
-            and the very first in Cyberjaya & Putrajaya, we offer a diverse
-            range of programs for every age and fitness level.
+          <p>
+            Breakaway Fitness Cyberjaya isn't just a gym - it's a a thriving
+            community. As the first official HYROX Training Club in Cyberjaya &
+            Putrajaya, your Centre offers a diverse menu of programs: Functional
+            Strength, HYROX Class, Aero Dance, Yoga, Pilates, Martial Arts and
+            even Silat Training. Certified coaches guide members in a
+            supportive, non-judgemental enviroment so they can build strength,
+            improve flexibility and achieve lasting results.
           </p>
         </div>
         <div className="w-full">
@@ -29,7 +32,7 @@ const BriefSection = () => {
         </div>
       </MaxWidthWrapper>
     </section>
-  );
-};
+  )
+}
 
-export default BriefSection;
+export default BriefSection

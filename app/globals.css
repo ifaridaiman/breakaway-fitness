@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @font-face {
   font-family: madeOuterSansBlack;
@@ -45,9 +45,9 @@
   --sidebar-border: #e5e5e5;
   --sidebar-ring: #a1a1a1;
   --font-sans: Mulish, sans-serif;
-  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+    'Liberation Mono', 'Courier New', monospace;
   --radius: 0.625rem;
   --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
   --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
@@ -140,6 +140,10 @@
   h3,
   h4 {
     font-family: madeOuterSansBlack;
+  }
+
+  p {
+    @apply font-mono leading-7;
   }
 }
 

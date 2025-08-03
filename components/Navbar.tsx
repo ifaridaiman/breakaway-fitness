@@ -1,31 +1,31 @@
-import Link from "next/link";
-import MaxWidthWrapper from "./MaxWidthWrapper";
-import { Button } from "./ui/button";
-import Image from "next/image";
+import Link from 'next/link'
+import MaxWidthWrapper from './MaxWidthWrapper'
+import { Button } from './ui/button'
+import Image from 'next/image'
 
 const Navbar = () => {
   const menuItems = [
     {
-      title: "HOME",
-      url: "/",
+      title: 'HOME',
+      url: '/',
     },
     {
-      title: "ABOUT",
-      url: "/about",
+      title: 'ABOUT',
+      url: '/about',
     },
     {
-      title: "SCHEDULE",
-      url: "/schedule",
+      title: 'SCHEDULE',
+      url: '/schedule',
     },
     {
-      title: "FAQ",
-      url: "/faq",
+      title: 'FAQ',
+      url: '/faq',
     },
-  ];
+  ]
 
   return (
-    <nav className="sticky top-0 z-40 p-2 font-bold">
-      <MaxWidthWrapper className="bg-white/10 backdrop-blur-lg px-6 md:px-8 py-4 flex justify-between items-center rounded-2xl">
+    <nav className="sticky top-0 z-40 p-0 md:p-2">
+      <MaxWidthWrapper className="bg-white/10 backdrop-blur-lg md:px-8 py-4 flex justify-between items-center md:rounded-2xl">
         <Link href="/">
           <Image
             src="/logo-icon-wordmark.svg"
@@ -42,14 +42,14 @@ const Navbar = () => {
             className="block xl:hidden"
           />
         </Link>
-        <div className="lg:flex items-center gap-10 hidden font-made-outer-sans-medium tracking-wider">
-          <ul className="flex items-center gap-4">
+        <div className="lg:flex items-center gap-10 hidden">
+          <ul className="flex items-center gap-4 font-made-outer-sans-medium tracking-wider">
             {menuItems.map((menu) => {
               return (
                 <li key={menu.title}>
                   <Link href={menu.url}>{menu.title}</Link>
                 </li>
-              );
+              )
             })}
           </ul>
           <div className="flex items-center gap-2">
@@ -59,7 +59,7 @@ const Navbar = () => {
         </div>
       </MaxWidthWrapper>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
