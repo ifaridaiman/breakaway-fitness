@@ -38,7 +38,7 @@ export default function HeroImages({ className }: { className?: string }) {
     gsap.set(firstImages.current, { xPercent: xPercent })
     gsap.set(secondImages.current, { xPercent: xPercent })
     requestAnimationFrame(animate)
-    xPercent += 0.03 * direction
+    xPercent += 0.015 * direction
   }
 
   return (

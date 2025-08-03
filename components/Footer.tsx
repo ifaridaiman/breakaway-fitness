@@ -41,7 +41,7 @@ const Footer = () => {
                 </h3>
                 <p className="text-center">
                   Join the Breakaway community today and start your journey
-                  <br /> towards a fitter, stronger you.
+                  towards a fitter, stronger you.
                 </p>
                 <Button className="mt-4 group" size="lg">
                   BECOME A MEMBER
