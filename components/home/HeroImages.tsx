@@ -7,7 +7,13 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 import { useEffect, useRef } from 'react'
 
-export default function HeroImages({ className }: { className?: string }) {
+export default function HeroImages({
+  className,
+  speed = 0.015,
+}: {
+  className?: string
+  speed?: number
+}) {
   const firstImages = useRef(null)
   const secondImages = useRef(null)
   const slider = useRef(null)
@@ -38,7 +44,7 @@ export default function HeroImages({ className }: { className?: string }) {
     gsap.set(firstImages.current, { xPercent: xPercent })
     gsap.set(secondImages.current, { xPercent: xPercent })
     requestAnimationFrame(animate)
-    xPercent += 0.015 * direction
+    xPercent += speed * direction
   }
 
   return (
@@ -50,7 +56,7 @@ export default function HeroImages({ className }: { className?: string }) {
               key={`${index}`}
               className="w-[80vw] md:w-96 lg:w-[700px] mr-2 flex-shrink-0"
             >
-              <AspectRatio ratio={16 / 9}>
+              <AspectRatio ratio={16 / 10}>
                 <Image
                   src={`/images/breakway-gym-${index + 1}.webp`}
                   alt="gym"
@@ -68,7 +74,7 @@ export default function HeroImages({ className }: { className?: string }) {
               key={`${index}`}
               className="w-[80vw] md:w-96 lg:w-[700px] mr-2 flex-shrink-0"
             >
-              <AspectRatio ratio={16 / 9}>
+              <AspectRatio ratio={16 / 10}>
                 <Image
                   src={`/images/breakway-gym-${index + 1}.webp`}
                   alt="gym"
