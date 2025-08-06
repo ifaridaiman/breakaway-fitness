@@ -24,8 +24,8 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className="sticky top-0 z-40 p-0 md:p-2">
-      <MaxWidthWrapper className="bg-white/10 backdrop-blur-lg md:px-8 py-4 flex justify-between items-center md:rounded-2xl">
+    <nav className="sticky top-0 z-40">
+      <MaxWidthWrapper className="py-4 flex justify-between items-center bg-background">
         <Link href="/">
           <Image
             src="/logo-icon-wordmark.svg"
@@ -42,8 +42,8 @@ const Navbar = () => {
             className="block xl:hidden"
           />
         </Link>
-        <div className="lg:flex items-center gap-10 hidden">
-          <ul className="flex items-center gap-4 font-made-outer-sans-medium tracking-wider">
+        <div className="lg:flex items-center gap-14 hidden">
+          <ul className="flex items-center gap-8 font-made-outer-sans-medium tracking-wider">
             {menuItems.map((menu) => {
               return (
                 <li key={menu.title}>
