@@ -1,6 +1,5 @@
 import BriefSection from '@/components/home/BriefSection'
 import { HeroSection } from '@/components/home/HeroSection'
-import LocationSection from '@/components/home/LocationSection'
 import PackageSection from '@/components/home/PackageSection'
 import { RectangleLine } from '@/components/ui/rectangle-line'
 
@@ -18,7 +17,7 @@ export default function Home() {
         <BriefSection />
         <PackageSection />
         {/* <LocationSection /> */}
-        <section className="h-96 my-96"></section>
+        {/* <section className="h-96 my-96"></section> */}
       </div>
     </>
   )

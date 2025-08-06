@@ -142,7 +142,8 @@
     font-family: madeOuterSansBlack;
   }
 
-  p {
+  p,
+  li {
     @apply font-mono md:text-xl leading-[1.5];
   }
 }

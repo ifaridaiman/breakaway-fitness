@@ -30,7 +30,7 @@ const Footer = () => {
   ]
 
   return (
-    <footer>
+    <footer className="mt-16">
       <MaxWidthWrapper>
         <div className="border-0 md:border-2 border-gray-500 rounded-[3rem] p-0 md:p-8 lg:p-12">
           <div className="border md:border-2 border-gray-500 rounded-[3rem] p-2 md:p-8 lg:p-12">
@@ -66,7 +66,7 @@ const Footer = () => {
               Multimedia, <br /> 63000 Cyberjaya, Selangor
             </p>
           </div>
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-8">
             <div className="flex flex-col items-center lg:items-end gap-2">
               <p>info@breakaway-fitness.com</p>
               <p>012-877 5756</p>

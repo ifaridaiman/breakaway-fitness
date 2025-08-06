@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 import MaxWidthWrapper from '../MaxWidthWrapper'
 import { PackageCard } from '../ui/package-card'
 import gsap from 'gsap'
@@ -10,27 +10,33 @@ const PackageSection = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
     const cards = gsap.utils.toArray('#card')
+    const mm = gsap.matchMedia()
 
     cards.forEach((card, i) => {
-      gsap.to(card as HTMLElement, {
-        scale: 0.8 + 0.2 * (i / (cards.length - 1)),
-        ease: 'none',
-        scrollTrigger: {
-          trigger: card as HTMLElement,
-          start: 'top ' + 20 * (i + 1),
-          end: 'bottom +=500',
-          endTrigger: '#container',
-          scrub: true,
-          pin: card as HTMLElement,
-          pinSpacing: false,
-        },
+      mm.add('(min-width: 1024px)', () => {
+        gsap.to(card as HTMLElement, {
+          scale: 0.8 + 0.2 * (i / (cards.length - 1)),
+          yPercent: -4,
+          scrollTrigger: {
+            trigger: card as HTMLElement,
+            start: 'top ' + 30 * (i + 1),
+            endTrigger: '#container',
+            end: 'bottom bottom',
+            scrub: 0.5,
+            pin: card as HTMLElement,
+            pinSpacing: false,
+          },
+        })
       })
     })
   }, [])
 
   return (
     <section>
-      <MaxWidthWrapper className="flex justify-center">
+      <MaxWidthWrapper className="flex flex-col items-center">
+        <h3 className="text-[10vw] lg:text-7xl py-14 leading-[0.8]">
+          FITNESS CLASES & PACKAGES
+        </h3>
         <div id="container" className="w-full">
           <div className="w-full">
             <PackageCard
@@ -92,34 +98,21 @@ const PackageSection = () => {
               </p>
             </PackageCard>
             <PackageCard
-              title="Personal Training – Single"
+              title="Personal Training"
               imageSrc="/images/breakway-gym-5.webp"
             >
-              <p>
-                Offer a standalone section promoting your body composition scan.
-                Describe how the InBody 580 Body Scan gives a detailed breakdown
-                of muscle mass, body fat percentage, visceral fat, body water
-                and metabolic rate in minutes. Emphasize the promotional price
-                (RM 80, normal walk in RM 150) and note that the purchase gives
-                1 credit valid for three months. Encourage prospective members
-                to use the scan to set baselines and track progress. Followed by
-                CTA button to VibeFam Booking system to purchase.
-              </p>
-            </PackageCard>
-            <PackageCard
-              title="Personal Training – Couple"
-              imageSrc="/images/breakway-gym-6.webp"
-            >
-              <p>
-                Offer a standalone section promoting your body composition scan.
-                Describe how the InBody 580 Body Scan gives a detailed breakdown
-                of muscle mass, body fat percentage, visceral fat, body water
-                and metabolic rate in minutes. Emphasize the promotional price
-                (RM 80, normal walk in RM 150) and note that the purchase gives
-                1 credit valid for three months. Encourage prospective members
-                to use the scan to set baselines and track progress. Followed by
-                CTA button to VibeFam Booking system to purchase.
-              </p>
+              <div>
+                <p>
+                  Explain that single personal training packages give clients
+                  one on one coaching tailored to their goals. Outline the
+                  options:
+                </p>
+                <ul className="list-disc pl-10">
+                  <li>10 sessions – Valid 45 days – RM 1 800</li>
+                  <li>20 sessions – Valid 90 days – RM 3 400</li>
+                  <li>30 sessions – Valid 135 days – RM 4 800</li>
+                </ul>
+              </div>
             </PackageCard>
           </div>
         </div>
