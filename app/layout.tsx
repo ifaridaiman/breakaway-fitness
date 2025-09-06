@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { config } from '@fortawesome/fontawesome-svg-core'
+import SmoothScroll from '@/components/SmoothScroll'
 config.autoAddCss = false
 
 const geistMono = Geist_Mono({
@@ -31,6 +32,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${mulish.className} ${geistMono.variable} antialiased`}>
         <Navbar />
+        <SmoothScroll />
         {children}
         <Footer />
       </body>

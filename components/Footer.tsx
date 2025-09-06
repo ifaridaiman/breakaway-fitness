@@ -43,10 +43,12 @@ const Footer = () => {
                   Join the Breakaway community today and start your journey
                   towards a fitter, stronger you.
                 </p>
-                <Button className="mt-4 group" size="lg">
-                  BECOME A MEMBER
-                  <ArrowRight className="group-hover:translate-x-1 transition duration-75" />
-                </Button>
+                <Link href="/signup">
+                  <Button className="mt-4 group" size="lg">
+                    BECOME A MEMBER
+                    <ArrowRight className="group-hover:translate-x-1 transition duration-75" />
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

@@ -144,7 +144,7 @@
 
   p,
   li {
-    @apply font-mono md:text-xl leading-[1.5];
+    @apply font-mono leading-[1.5];
   }
 }
 

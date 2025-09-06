@@ -25,10 +25,10 @@ const PackageCard = ({
           />
         </div>
         <div className="p-4 md:p-12 w-full">
-          <h4 className="text-3xl xl:text-4xl lg:text-5xl mb-4">
+          <h4 className="text-[6.5vw] md:text-4xl leading-[0.9] mb-4">
             {title.toUpperCase()}
           </h4>
-          {children}
+          <div className="text-lg lg:text-2xl">{children}</div>
         </div>
       </div>
     </div>

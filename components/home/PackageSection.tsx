@@ -13,7 +13,7 @@ const PackageSection = () => {
     const mm = gsap.matchMedia()
 
     cards.forEach((card, i) => {
-      mm.add('(min-width: 1024px)', () => {
+      mm.add('(min-width: 1440px)', () => {
         gsap.to(card as HTMLElement, {
           scale: 0.8 + 0.2 * (i / (cards.length - 1)),
           yPercent: -4,
@@ -34,42 +34,53 @@ const PackageSection = () => {
   return (
     <section>
       <MaxWidthWrapper className="flex flex-col items-center">
-        <h3 className="text-[10vw] lg:text-7xl py-14 leading-[0.8]">
+        <h3 className="text-center text-[6.5vw] lg:text-7xl py-14 leading-[0.8]">
           FITNESS CLASES & PACKAGES
         </h3>
         <div id="container" className="w-full">
           <div className="w-full">
             <PackageCard
               title="InBody 580 Body Scan – Limited time promo"
-              imageSrc="/images/breakway-gym-1.webp"
+              imageSrc="/images/package/580-body-scan.jpg"
             >
               <p>
-                Offer a standalone section promoting your body composition scan.
-                Describe how the InBody 580 Body Scan gives a detailed breakdown
-                of muscle mass, body fat percentage, visceral fat, body water
-                and metabolic rate in minutes. Emphasize the promotional price
-                (RM 80, normal walk in RM 150) and note that the purchase gives
-                1 credit valid for three months. Encourage prospective members
-                to use the scan to set baselines and track progress. Followed by
-                CTA button to VibeFam Booking system to purchase.
+                Get a complete breakdown of your body composition in just
+                minutes!
+              </p>
+              <ul className="list-disc pl-10">
+                <li>Muscle mass, body fat %, visceral fat </li>
+                <li>Body water levels & metabolic rate </li>
+              </ul>
+              <ul className="list-disc pl-10">
+                <li>Promotional price: RM 80 (normal walk in RM 150)</li>
+                <li>Includes 1 credit valid for 3 months</li>
+              </ul>
+              <p>
+                Perfect for tracking your fitness journey and measuring
+                progress.
               </p>
             </PackageCard>
             <PackageCard
               title="Open Gym (Walk In)"
-              imageSrc="/images/breakway-gym-2.webp"
+              imageSrc="/images/package/open-gym.jpg"
             >
               <p>
-                Cater to independent exercisers with an Open Gym option. Explain
-                that the “Walk In (Open Gym)” package grants access to your
-                fully equipped training space so clients can work out at their
-                own pace. Pricing: RM 25 for one credit, valid for one week.
-                Mention that group booking for friends or colleagues is
-                available.
+                Prefer training on your own? Our Open Gym option is perfect for
+                independent exercisers.
               </p>
+              <ul className="list-disc pl-10">
+                <li>Full access to all training equipment </li>
+                <li>Exercise at your own pace, your own way </li>
+                <li>
+                  Invite friends or colleagues – group bookings available!{' '}
+                </li>
+              </ul>
+              <p>Price: RM 25 (1 Credit – valid for 1 week)</p>
+              <p>Reserve your Open Gym session today through VibeFam. </p>
             </PackageCard>
             <PackageCard
               title="HYROX Group Training"
-              imageSrc="/images/breakway-gym-3.webp"
+              imageSrc="/images/package/hyrox-group-training.jpg"
             >
               <p>
                 Offer a standalone section promoting your body composition scan.
@@ -84,7 +95,7 @@ const PackageSection = () => {
             </PackageCard>
             <PackageCard
               title="Group Classes"
-              imageSrc="/images/breakway-gym-4.webp"
+              imageSrc="/images/package/group-classes.jpg"
             >
               <p>
                 Offer a standalone section promoting your body composition scan.
@@ -99,7 +110,7 @@ const PackageSection = () => {
             </PackageCard>
             <PackageCard
               title="Personal Training"
-              imageSrc="/images/breakway-gym-5.webp"
+              imageSrc="/images/package/personal-training.jpg"
             >
               <div>
                 <p>

@@ -11,7 +11,7 @@ const BriefSection = () => {
               <h3 className="text-3xl md:text-4xl lg:text-5xl">
                 BREAKAWAY FITNESS, CYBERJAYA
               </h3>
-              <p>
+              <p className="text-lg md:text-xl lg:text-2xl max-w-3xl">
                 Breakaway Fitness Cyberjaya isn't just a gym - it's a a thriving
                 community. As the first official HYROX Training Club in
                 Cyberjaya & Putrajaya, your Centre offers a diverse menu of
@@ -31,7 +31,7 @@ const BriefSection = () => {
           </div>
           <div className="relative w-full min-h-64 hidden xl:block">
             <Image
-              src="/images/breakway-gym-1.webp"
+              src="/images/gym/gym12.jpg"
               alt="gym"
               fill
               className="object-cover rounded-2xl md:rounded-4xl"
