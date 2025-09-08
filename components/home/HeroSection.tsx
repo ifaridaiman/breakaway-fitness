@@ -39,7 +39,7 @@ const HeroSection = () => {
         <HeroImages className="rotate-5 scale-110 pt-10" speed={0.02} />
         <HeroImages
           className="lg:hidden scale-110 pt-4"
-          seed={5}
+          seed={7}
           direction={1}
           speed={0.05}
         />
