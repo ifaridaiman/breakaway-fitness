@@ -3,7 +3,7 @@ import MaxWidthWrapper from '../MaxWidthWrapper'
 
 const BriefSection = () => {
   return (
-    <section className="my-32">
+    <section className="my-40">
       <MaxWidthWrapper>
         <div className="rounded-4xl grid grid-cols-1 xl:grid-cols-2 w-full gap-4 p-6 md:p-12 bg-gradient-to-tr from-lime-400 from-15% to-emerald-500 to-65%">
           <div className="flex flex-col justify-between lg:pr-8">
