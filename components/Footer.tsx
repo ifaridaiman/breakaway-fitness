@@ -39,7 +39,7 @@ const Footer = () => {
                 <h3 className="text-center text-4xl md:text-5xl">
                   BREAKAWAY FROM LIMITS!
                 </h3>
-                <p className="text-center">
+                <p className="text-center text-lg lg:text-xl">
                   Join the Breakaway community today and start your journey
                   towards a fitter, stronger you.
                 </p>

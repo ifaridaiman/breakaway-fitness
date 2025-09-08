@@ -15,7 +15,7 @@ const PackageCard = ({
 }) => {
   return (
     <div id="card" className={cn('w-full mb-8', className)}>
-      <div className="flex flex-col xl:flex-row bg-white rounded-2xl xl:rounded-4xl lg:min-h-[80vh] drop-shadow-xl border border-black/40">
+      <div className="flex flex-col xl:flex-row bg-white rounded-2xl xl:rounded-4xl lg:min-h-[80vh] drop-shadow-xl">
         <div className="relative w-full min-h-64">
           <Image
             src={imageSrc ?? '/images/breakway-gym-1.webp'}
@@ -28,7 +28,7 @@ const PackageCard = ({
           <h4 className="text-[6.5vw] md:text-4xl leading-[0.9] mb-4">
             {title.toUpperCase()}
           </h4>
-          <div className="text-lg lg:text-2xl">{children}</div>
+          <div className=" lg:text-xl space-y-4">{children}</div>
         </div>
       </div>
     </div>

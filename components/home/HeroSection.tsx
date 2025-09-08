@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import MaxWidthWrapper from '../MaxWidthWrapper'
 import HeroImages from './HeroImages'
+import Link from 'next/link'
 
 const HeroSection = () => {
   return (
@@ -26,11 +27,14 @@ const HeroSection = () => {
       </MaxWidthWrapper>
       <div className="relative space-y-2">
         <div className="drop-shadow-xl right-10 -top-20 z-20 hover:cursor-pointer flex justify-center lg:absolute lg:block">
-          <div className="p-3 rounded-xl lg:p-6 lg:-rotate-10 bg-gradient-to-bl from-primary to-lime-400 lg:rounded-3xl border-4 border-white flex justify-center items-center hover:scale-105 transition">
+          <Link
+            href="/signup"
+            className="p-3 rounded-xl lg:p-6 lg:-rotate-10 bg-gradient-to-bl from-primary to-lime-400 lg:rounded-3xl border-4 border-white flex justify-center items-center hover:scale-105 transition"
+          >
             <h3 className="text-[3vw] xl:text-[2vw] text-center">
               START BREAKAWAY NOW!
             </h3>
-          </div>
+          </Link>
         </div>
         <HeroImages className="rotate-5 scale-110 pt-10" speed={0.02} />
         <HeroImages
