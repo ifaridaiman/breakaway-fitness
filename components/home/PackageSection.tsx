@@ -41,7 +41,7 @@ const PackageSection = () => {
     cards.forEach((card, i) => {
       gsap.to(card as HTMLElement, {
         scale: 0.8 + 0.2 * (i / (cards.length - 1)),
-        yPercent: -8,
+        yPercent: -10,
         scrollTrigger: {
           trigger: card as HTMLElement,
           start: 'top ' + 30 * (i + 1),
@@ -57,7 +57,7 @@ const PackageSection = () => {
 
   return (
     <section>
-      <MaxWidthWrapper className="flex flex-col items-center">
+      <MaxWidthWrapper className="flex flex-col items-center my-8">
         <div id="container" className="w-full ">
           <div className="w-full">
             {packages.map((i) => (
