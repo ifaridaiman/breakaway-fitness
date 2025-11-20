@@ -43,7 +43,7 @@ const Navbar = () => {
             })}
           </ul>
           <div className="flex items-center gap-2">
-            <Button variant="secondary">Contact</Button>
+            {/* <Button variant="secondary">Contact</Button> */}
             <Button>Sign Up</Button>
           </div>
         </div>
