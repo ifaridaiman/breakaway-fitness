@@ -1,5 +1,15 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@font-face {
+  font-family: madeOuterSansBlack;
+  src: url(../public/fonts/MADE-Outer-Sans-Black-PERSONAL-USE.otf);
+}
+
+@font-face {
+  font-family: madeOuterSansMedium;
+  src: url(../public/fonts/MADE-Outer-Sans-Medium-PERSONAL-USE.otf);
+}
 
 :root {
   --background: #eeede1;
@@ -34,10 +44,10 @@
   --sidebar-accent-foreground: #171717;
   --sidebar-border: #e5e5e5;
   --sidebar-ring: #a1a1a1;
-  --font-sans: Poppins, sans-serif;
-  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: Mulish, sans-serif;
+  --font-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+    'Liberation Mono', 'Courier New', monospace;
   --radius: 0.625rem;
   --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
   --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
@@ -109,14 +119,11 @@
 
   --animate-infinite-scroll: infinite-scroll 32s linear infinite;
 
-  @keyframes infinite-scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
+  --font-made-outer-sans-medium: madeOuterSansMedium;
+  --font-made-outer-sans-black: madeOuterSansBlack;
+}
+
+@theme {
 }
 
 @layer base {
@@ -126,6 +133,18 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: madeOuterSansBlack;
+  }
+
+  p,
+  li {
+    @apply font-mono leading-[1.5];
   }
 }
 
