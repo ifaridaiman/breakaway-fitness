@@ -23,10 +23,6 @@ const Navbar = () => {
       url: '/faq',
     },
     {
-      title: 'CONTACT',
-      url: '/contact',
-    },
-    {
       title: 'SIGN UP',
       url: '/signup',
     },
