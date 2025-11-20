@@ -22,12 +22,12 @@ const BriefSection = () => {
                 results.
               </p>
             </div>
-            <div className="flex justify-center items-center bg-gray-300/80 min-h-64 h-full mt-10">
+            {/* <div className="flex justify-center items-center bg-gray-300/80 min-h-64 h-full mt-10">
               <h4 className="text-center">
                 Placeholder for content (e.g. Reviews, Logo and some coool
                 sticker)
               </h4>
-            </div>
+            </div> */}
           </div>
           <div className="relative w-full min-h-64 hidden xl:block">
             <Image
